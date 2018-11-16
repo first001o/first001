@@ -1,0 +1,17 @@
+
+.mainindex{
+    float: left;
+    text-align: center;
+    margin-left: 90px;
+}
+.picture-title{
+    margin: 10px;
+
+    font-weight: 600;
+}
+.picture-index{
+
+    width: 500px;
+    margin: 10px;
+
+}

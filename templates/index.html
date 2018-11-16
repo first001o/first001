@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}主页{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+<style>
+.titleh5{margin-bottom: 50px;text-align: center}
+
+</style>
+{% endblock %}
+{% block main1 %}
+<div class="container">
+        {% for img in imglist %}
+            <div class="col-sm-4 col-md-4">
+
+                    <a href="{{ url_for('detail',picture_name=img.dirname) }}" class="thumbnail ">
+                    <img style="width:340px;height:260px;" src="../static/images/{{ img.dirname }}/{{ img.filelist[0] }}" title="{{ img.dirname }}" alt="{{ img.dirname }}">
+                    </a>
+                    <a href="{{ url_for('detail',picture_name=img.dirname) }}"><h5 class="titleh5" >{{ img.dirname }}</h5></a>
+
+            </div>
+
+        {% endfor %}
+</div>
+{% endblock %}

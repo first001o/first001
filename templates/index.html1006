@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}主页{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+{% endblock %}
+{% block main %}
+
+        {% for picture in pictures %}
+            <div class="mainindex">
+            <div class="picture-index">
+                <img  src="static/images/{{ picture.name }}.jpg" alt="" class="picture-index">
+
+            </div>
+            <div class="picture-title">
+                <a href="{{ url_for('detail',picture_id=picture.id) }}">{{ picture.title }}</a>
+            </div>
+            <hr>
+            </div>
+        {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,21 @@
+.base-logo{
+    width: 60px;
+    padding: 0px 0px;
+    margin-right: 30px;
+    float: left;
+}
+.header-logo{
+    width: 60px;
+    height: 50px;
+    margin-right: 30px;
+}
+.base-title{
+    text-align: center;
+}
+.main{
+    background-color: aqua;
+    width: 733px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}

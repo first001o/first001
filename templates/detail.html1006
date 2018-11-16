@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}主页{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+<script>
+    function funds() {
+        var ui =document.getElementById("aaa");
+        ui.style.display="none";
+        var ui1 =document.getElementById("bbb");
+        ui1.style.display="block";
+    }
+</script>
+{% endblock %}
+{% block main %}
+
+	<div id="aaa" style="margin: 100px 150px ">
+	<img src="../static/dashang.jpg">
+	<div style="font-size: 30px;margin: 20px 50px;">
+	<button onclick="funds()">请打赏哦，下次打赏？</button>
+	</div>
+	</div>
+	<div id="bbb" style="display:none">
+        <h3 style="text-align: center;">{{ picture.title }}</h3>
+        {% for picture1 in picture_list %}
+                <img  style="margin: 10px 120px;" src="../static/images/{{ picture.name }}/{{ picture1 }}" alt="" class="picture-index">
+        {% endfor %}
+	</div>
+
+{% endblock %}
